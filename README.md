@@ -44,19 +44,10 @@ SmartBank – Bank Management System
 ├── BM_System
 │   ├── libs
 │   ├── src
-│   │   └── def_pkg
-│   └── E_Statement
+│       └── def_pkg
+│ 
 │
 ├── Screenshots
-│   ├── 1-Login.PNG
-│   ├── 2-User_Screen.PNG
-│   ├── 3-E-Statement.PNG
-│   ├── 4-Manager_Screen.PNG
-│   ├── 5-Create Account.PNG
-│   ├── 6-Search Account.PNG
-│   ├── 7-Accountant_Screen.PNG
-│   ├── 8_Cheque_Deposit.PNG
-│   └── 9-Sample_E_Statement.PNG
 │
 ├── MySQL Script.sql
 ├── README.md
