@@ -1,65 +1,34 @@
 # SmartBank – Bank Management System
 
-SmartBank is a desktop-based Bank Management System developed using Java Swing
-and MySQL. The application provides a graphical interface for managing
-customer accounts, banking operations, transactions, and electronic statements.
+A desktop Bank Management System built with **Java Swing** and **MySQL**. It provides separate dashboards for **Clients**, **Managers**, and **Accountants**, supporting account creation, deposits/withdrawals, transfers, cheque deposits, cardless withdrawal, and PDF e-statement generation.
 
-## Overview
+## Tech Stack
+- Java (Swing)
+- MySQL + JDBC
+- iText (PDF generation)
 
-SmartBank provides different interfaces for customers, managers, and
-accountants. The system uses Java Swing for the graphical user interface and
-MySQL for storing and managing banking-related data.
+## How to Run
 
-The application demonstrates the use of Java programming, object-oriented
-programming, GUI development, database connectivity, and PDF generation.
+1. **Set up the database**
+   - Install MySQL and start the server.
+   - Open MySQL Workbench (or CLI) and run `MySQL Script.sql` — this creates the `bank_schema` database, tables, and sample data.
 
-## Features
+2. **Configure the connection**
+   - Open `BM_System/src/def_pkg/DB_Handler.java`.
+   - Update the `url`, `username`, and `password` fields to match your MySQL setup (default expects MySQL running on `localhost:3307`).
 
-- User Login and Authentication
-- User Dashboard
-- Account Creation
-- Account Search
-- Manager Dashboard
-- Accountant Dashboard
-- Bank Account Management
-- Cheque Deposit
-- Transaction History
-- E-Statement Generation
-- PDF E-Statement Generation
-- MySQL Database Integration
-- Role-based interfaces for customers and bank employees
+3. **Add the libraries**
+   - In your IDE (e.g. Eclipse/IntelliJ), add all `.jar` files from `BM_System/libs/` to the project's build path.
 
-## Technologies Used
-
-- Java
-- Java Swing
-- MySQL
-- JDBC
-- Eclipse IDE
-- iText Java Library
+4. **Run the app**
+   - Open the project in your IDE.
+   - Run `BM_System.java` (the main class in `def_pkg`).
+   - The login screen will launch — use the sample credentials from `MySQL Script.sql` (e.g. `rajesh55` / manager, `danielt211` / accountant, or a client login) to sign in.
 
 ## Project Structure
-
-```text
-SmartBank – Bank Management System
-│
-├── BM_System
-│   ├── libs
-│   ├── src
-│   │   └── def_pkg
-│   └── E_Statement
-│
-├── Screenshots
-│   ├── 1-Login.PNG
-│   ├── 2-User_Screen.PNG
-│   ├── 3-E-Statement.PNG
-│   ├── 4-Manager_Screen.PNG
-│   ├── 5-Create Account.PNG
-│   ├── 6-Search Account.PNG
-│   ├── 7-Accountant_Screen.PNG
-│   ├── 8_Cheque_Deposit.PNG
-│   └── 9-Sample_E_Statement.PNG
-│
-├── MySQL Script.sql
-├── README.md
-└── statement.md
+```
+BM_System/
+├── libs/        → external JARs (MySQL connector, iText, etc.)
+└── src/def_pkg/ → Java source files (GUI, DB handler, models)
+MySQL Script.sql → database schema + sample data
+```
